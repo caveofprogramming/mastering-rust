@@ -1,12 +1,13 @@
 fn main() {
     let temperature = 25;
 
-    let info = if temperature < 21 {
-        "Take coat"
+    let result = if temperature > 20 {
+        "Warm"
     }
     else {
-        "It's warm"
+        "Cool"
     };
 
-    println!("{info}");
+    println!("{result}");
+
 }

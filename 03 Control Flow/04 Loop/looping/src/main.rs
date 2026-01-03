@@ -2,14 +2,16 @@ fn main() {
 
     let mut count = 0;
 
-    let result = loop {
-        println!("Hello {count}");
-        count += 1;
+    let result = 'running: loop {
+        println!("loop {count}");
 
-        if count == 5 {
-            break count;
+        if count > 5 {
+            break 'running 123;
         }
+
+        count += 1;
     };
 
-    println!("{result}");
+    println!("result: {result}");
 }
+
